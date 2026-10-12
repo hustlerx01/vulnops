@@ -1,0 +1,11 @@
+Found Java version 17.0.20.1
+Available memory: 16013 MB
+Using JVM args: -Xmx4003m
+This ZAP installation is over a year old - its probably very out of date
+Accessing URL
+Using traditional spider
+Active scanning
+[=                   ] 8% |[========            ] 42% /[=================   ] 87% -[====================] 100% 
+Attack complete
+Writing results to ./scans/zap.json
+EXIT 0
