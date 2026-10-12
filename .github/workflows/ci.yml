@@ -1,0 +1,36 @@
+name: ci
+on:
+  push:
+  pull_request:
+  schedule: [{cron: "30 3 * * *"}]   # daily 09:00 IST: refresh KEV/EPSS, re-rank, re-check SLAs
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements-dev.txt && pytest -q
+  scan-and-prioritise:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Trivy (fs)
+        uses: aquasecurity/trivy-action@0.28.0
+        with: {scan-type: fs, scan-ref: sample-app, scanners: vuln, format: json, output: ci-trivy.json}
+      - name: Grype (dir)
+        uses: anchore/scan-action@v6
+        id: grype
+        with: {path: sample-app, output-format: json, fail-build: false}
+      - name: ZAP baseline against the lab app
+        run: |
+          python sample-app/server.py & sleep 2
+          docker run --rm --network host -v "$PWD:/zap/wrk:rw" ghcr.io/zaproxy/zaproxy:stable \
+            zap-baseline.py -t http://127.0.0.1:8088/ -J ci-zap.json -I || true
+      - name: Normalise + prioritise (live KEV + EPSS)
+        run: python -m vulnops.cli --trivy ci-trivy.json --grype ${{ steps.grype.outputs.json }} --zap ci-zap.json -o ci-results --state ci-state.json
+      - uses: actions/upload-artifact@v4
+        with: {name: vulnops-dashboard, path: ci-results/}
