@@ -49,7 +49,7 @@ xdg-open results/dashboard.html
 docker build -t vulnops . && docker run --rm -v "$PWD/out:/app/out" vulnops
 ```
 
-## Results (actual run on the box, 2026-10-11 IST)
+## Results (actual run on my lab machine, 2026-10-11 IST)
 Feeds: **CISA KEV catalog 2026.10.08 (1,739 CVEs)** and **EPSS scores dated 2026-10-10**, fetched live. Tools: Trivy 0.75.0, Grype 0.120.1, ZAP 2.16.1.
 
 **Run 1: initial scan** (`results/run1_2026-10-11/`)
@@ -83,7 +83,7 @@ ZAP (11 alerts) found missing CSP and anti-clickjacking headers, cookies without
 - The ZAP riskcode→CVSS mapping is my assumption. ZAP ran a single quick scan (spider + active) against localhost with no authentication or AJAX spider.
 - EPSS is a 30-day probability and changes daily, so priorities drift. That's why CI is on a daily cron and `state.json` keeps the first-seen date.
 - Not integrated with DefectDojo or Grafana yet. The dashboard is static HTML, and `findings.csv`/`metrics.json` are the integration points.
-- The 2026-10-25 run uses a simulated date. Dockerfile and CI are written but not executed here (no Docker daemon on the box, and nothing pushed). The CI ZAP step uses `zap-baseline.py` (passive) instead of the quick scan I ran locally.
+- The 2026-10-25 run uses a simulated date. Dockerfile and CI are written but not executed here (no Docker daemon on my lab machine). The CI ZAP step uses `zap-baseline.py` (passive) instead of the quick scan I ran locally.
 
 ## Sources
 - CISA Known Exploited Vulnerabilities catalog (JSON feed): https://www.cisa.gov/known-exploited-vulnerabilities-catalog · https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
