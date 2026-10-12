@@ -1,0 +1,186 @@
+priority,risk_score,cve,vuln_id,package,version,fixed_version,cvss,epss,kev,tools,first_seen,due,sla_status,title
+P0,100.0,CVE-2021-44228,CVE-2021-44228,org.apache.logging.log4j:log4j-core,2.14.1,"2.15.0, 2.3.1, 2.12.2",10,0.99999,True,grype+trivy,2026-10-11,2026-10-18,OK,log4j-core: Remote code execution in Log4j 2.x when logs contain an attacker-controlled string value
+P0,99.5,CVE-2022-22965,CVE-2022-22965,org.springframework:spring-beans,5.3.17,"5.2.20.RELEASE, 5.3.18",9.8,0.99638,True,grype+trivy,2026-10-11,2026-10-18,OK,spring-framework: RCE via Data Binding on JDK 9+
+P0,98.0,CVE-2021-45046,CVE-2021-45046,org.apache.logging.log4j:log4j-core,2.14.1,"2.16.0, 2.12.2, 2.3.1",9,0.99977,True,grype+trivy,2026-10-11,2026-10-18,OK,log4j-core: DoS in log4j 2.x with thread context message pattern and context lookup pattern (incomplete fix for CVE-2021-44228)
+P0,97.6,CVE-2023-4863,CVE-2023-4863,pillow,6.2.0,10.0.1,8.8,0.99979,True,grype+trivy,2026-10-11,2026-10-18,OK,libwebp: Heap buffer overflow in WebP Codec
+P1,57.2,CVE-2021-45105,CVE-2021-45105,org.apache.logging.log4j:log4j-core,2.14.1,"2.12.3, 2.17.0, 2.3.1",8.6,0.99999,False,grype+trivy,2026-10-11,2026-10-26,OK,log4j-core: DoS in log4j 2.x with Thread Context Map (MDC) input data contains a recursive lookup and context lookup pattern
+P1,52.4,CVE-2021-44832,CVE-2021-44832,org.apache.logging.log4j:log4j-core,2.14.1,"2.3.2, 2.12.4, 2.17.1",6.6,0.97906,False,grype+trivy,2026-10-11,2026-10-26,OK,log4j-core: remote code execution via JDBC Appender
+P1,46.9,CVE-2019-11358,CVE-2019-11358,django,2.2.0,"2.1.9, 2.2.2",6.1,0.8682,False,grype+trivy,2026-10-11,2026-10-26,OK,"jquery: Prototype pollution in object's prototype leading to denial of service, remote code execution, or property injection"
+P1,45.8,CVE-2020-7471,CVE-2020-7471,django,2.2.0,"1.11.28, 2.2.10, 3.0.3",9.8,0.65575,False,grype+trivy,2026-10-11,2026-10-26,OK,django: potential SQL injection via StringAgg(delimiter)
+P1,41.0,CVE-2019-19844,CVE-2019-19844,django,2.2.0,"1.11.27, 2.2.9, 3.0.1",9.8,0.53561,False,grype+trivy,2026-10-11,2026-10-26,OK,Django: crafted email address allows account takeover
+P1,38.7,CVE-2019-14234,CVE-2019-14234,django,2.2.0,"1.11.23, 2.1.11, 2.2.4",9.8,0.47694,False,grype+trivy,2026-10-11,2026-10-26,OK,Django: SQL injection possibility in key and index lookups for JSONField/HStoreField
+P1,34.8,CVE-2022-23833,CVE-2022-23833,django,2.2.0,"2.2.27, 3.2.12, 4.0.2",7.5,0.49527,False,grype+trivy,2026-10-11,2026-10-26,OK,django: Denial-of-service possibility in file uploads
+P1,27.1,CVE-2022-28346,CVE-2022-28346,django,2.2.0,"2.2.28, 3.2.13, 4.0.4",9.8,0.18661,False,grype+trivy,2026-10-11,2026-10-26,OK,"Django: SQL injection in QuerySet.annotate(),aggregate() and extra()"
+P1,26.6,CVE-2020-9402,CVE-2020-9402,django,2.2.0,"1.11.29, 2.2.11, 3.0.4",8.8,0.22513,False,grype+trivy,2026-10-11,2026-10-26,OK,"django: potential SQL injection via ""tolerance"" parameter in GIS functions and aggregates on Oracle"
+P1,25.9,CVE-2025-64459,CVE-2025-64459,django,2.2.0,"5.2.8, 5.1.14, 4.2.26",9.1,0.19257,False,grype+trivy,2026-10-11,2026-10-26,OK,django: Django SQL injection
+P1,23.2,CVE-2025-57833,CVE-2025-57833,django,2.2.0,"4.2.24, 5.1.12, 5.2.6",8.1,0.17432,False,grype+trivy,2026-10-11,2026-10-26,OK,django: Django SQL injection in FilteredRelation column aliases
+P1,22.9,CVE-2021-23337,CVE-2021-23337,lodash,4.17.15,4.17.21,7.2,0.21333,False,grype+trivy,2026-10-11,2026-10-26,OK,nodejs-lodash: command injection via template
+P1,22.0,CVE-2020-14343,CVE-2020-14343,pyyaml,5.3,5.4,9.8,0.05984,False,grype+trivy,2026-10-11,2026-10-26,OK,PyYAML: incomplete fix for CVE-2020-1747
+P1,21.8,CVE-2020-1747,CVE-2020-1747,pyyaml,5.3,5.3.1,9.8,0.05442,False,grype+trivy,2026-10-11,2026-10-26,OK,PyYAML: arbitrary command execution through python/object/new when FullLoader is used
+P1,21.4,CVE-2021-44906,CVE-2021-44906,minimist,1.2.0,"1.2.6, 0.2.4",9.8,0.04581,False,grype+trivy,2026-10-11,2026-10-26,OK,minimist: prototype pollution
+P1,21.3,CVE-2020-5311,CVE-2020-5311,pillow,6.2.0,6.2.2,9.8,0.04212,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: out-of-bounds write in expandrow in libImaging/SgiRleDecode.c
+P1,21.1,CVE-2020-5312,CVE-2020-5312,pillow,6.2.0,6.2.2,9.8,0.0369,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: improperly restricted operations on memory buffer in libImaging/PcxDecode.c
+P1,20.9,CVE-2021-34552,CVE-2021-34552,pillow,6.2.0,8.3.0,9.8,0.03188,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: Buffer overflow in image convert function
+P1,20.9,CVE-2022-22817,CVE-2022-22817,pillow,6.2.0,9.0.1,9.8,0.03334,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: PIL.ImageMath.eval allows evaluation of arbitrary expressions
+P1,20.8,CVE-2022-28347,CVE-2022-28347,django,2.2.0,"2.2.28, 3.2.13, 4.0.4",9.8,0.02943,False,grype+trivy,2026-10-11,2026-10-26,OK,Django: SQL injection via QuerySet.explain(options) on PostgreSQL
+P1,20.6,CVE-2026-4800,CVE-2026-4800,lodash,4.17.15,4.18.0,9.8,0.02618,False,grype+trivy,2026-10-11,2026-10-26,OK,lodash: lodash: Arbitrary code execution via untrusted input in template imports
+P1,20.5,CVE-2021-25289,CVE-2021-25289,pillow,6.2.0,8.1.1,9.8,0.02345,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: insufficent fix for CVE-2020-35654 due to incorrect error checking in TiffDecode.c
+P1,20.3,CVE-2025-62718,CVE-2025-62718,axios,0.21.0,"1.15.0, 0.31.0",9.9,0.01186,False,grype+trivy,2026-10-11,2026-10-26,OK,axios: Axios: Server-Side Request Forgery and proxy bypass due to improper hostname normalization
+P1,19.4,CVE-2021-25287,CVE-2021-25287,pillow,6.2.0,8.2.0,9.1,0.02931,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: Out-of-bounds read in J2K image reader
+P1,19.3,CVE-2022-24303,CVE-2022-24303,pillow,6.2.0,9.0.1,9.1,0.02691,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: temporary directory with a space character allows removal of unrelated file after im.show() and related actions
+P1,19.2,CVE-2021-25288,CVE-2021-25288,pillow,6.2.0,8.2.0,9.1,0.02388,False,grype+trivy,2026-10-11,2026-10-26,OK,python-pillow: Out-of-bounds read in J2K image reader
+P2,20.2,CVE-2026-42043,CVE-2026-42043,axios,0.21.0,"1.15.1, 0.31.1",10,0.00579,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: NO_PROXY bypass via crafted URL
+P2,18.6,CVE-2019-10906,CVE-2019-10906,jinja2,2.10,2.10.1,8.6,0.03534,False,grype+trivy,2026-10-11,2026-11-10,OK,python-jinja2: str.format_map allows sandbox escape
+P2,18.4,CVE-2021-3749,CVE-2021-3749,axios,0.21.0,0.21.2,7.5,0.08515,False,grype+trivy,2026-10-11,2026-11-10,OK,nodejs-axios: Regular expression denial of service in trim function
+P2,18.4,CVE-2020-5310,CVE-2020-5310,pillow,6.2.0,6.2.2,8.8,0.01975,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Integer overflow leading to buffer overflow in ImagingLibTiffDecode
+P2,18.4,CVE-2026-54058,CVE-2026-54058,pillow,6.2.0,12.3.0,9.1,0.00521,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Memory disclosure or denial of service via crafted McIdas AREA image
+P2,18.3,CVE-2020-35654,CVE-2020-35654,pillow,6.2.0,8.1.0,8.8,0.01817,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: decoding crafted YCbCr files could result in heap-based buffer overflow
+P2,18.1,CVE-2026-15307,CVE-2026-15307,django,2.2.0,"5.2.17, 6.0.8",8.8,0.01134,False,grype+trivy,2026-10-11,2026-11-10,OK,django: Django: Remote code execution via GeoDjango spatial lookups
+P2,18.0,CVE-2022-36359,CVE-2022-36359,django,2.2.0,"3.2.15, 4.0.7",8.8,0.00883,False,grype+trivy,2026-10-11,2026-11-10,OK,An issue was discovered in the HTTP FileResponse class in Django 3.2 b ...
+P2,18.0,CVE-2018-18074,CVE-2018-18074,requests,2.19.1,2.20.0,7.5,0.07443,False,grype+trivy,2026-10-11,2026-11-10,OK,python-requests: Redirect from HTTPS to HTTP does not remove Authorization header
+P2,17.8,CVE-2025-27516,CVE-2025-27516,jinja2,2.10,3.1.6,8.8,0.00507,False,grype+trivy,2026-10-11,2026-11-10,OK,jinja2: Jinja sandbox breakout through attr filter selecting format method
+P2,17.5,CVE-2026-44492,CVE-2026-44492,axios,0.21.0,"1.16.0, 0.32.0",8.6,0.00783,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Proxy bypass via IPv4-mapped IPv6 address non-normalization
+P2,17.2,CVE-2020-11538,CVE-2020-11538,pillow,6.2.0,7.1.0,8.1,0.02514,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: out-of-bounds reads/writes in the parsing of SGI image files in expandrow/expandrow2
+P2,17.1,CVE-2025-13465,CVE-2025-13465,lodash,4.17.15,4.17.23,8.2,0.0185,False,grype+trivy,2026-10-11,2026-11-10,OK,lodash: prototype pollution in _.unset and _.omit functions
+P2,17.1,CVE-2021-31542,CVE-2021-31542,django,2.2.0,"2.2.21, 3.1.9, 3.2.1",7.5,0.05334,False,grype+trivy,2026-10-11,2026-11-10,OK,django: Potential directory-traversal via uploaded files
+P2,17.1,CVE-2021-33571,CVE-2021-33571,django,2.2.0,"2.2.24, 3.1.12, 3.2.4",7.5,0.0526,False,grype+trivy,2026-10-11,2026-11-10,OK,"django: Possible indeterminate SSRF, RFI, and LFI attacks since validators accepted leading zeros in IPv4 addresses"
+P2,16.9,CVE-2020-8203,CVE-2020-8203,lodash,4.17.15,4.17.19,7.4,0.05213,False,grype+trivy,2026-10-11,2026-11-10,OK,nodejs-lodash: prototype pollution in zipObjectDeep function
+P2,16.9,CVE-2023-50447,CVE-2023-50447,pillow,6.2.0,10.2.0,8.1,0.01703,False,grype+trivy,2026-10-11,2026-11-10,OK,pillow: Arbitrary Code Execution via the environment parameter
+P2,16.9,CVE-2021-27922,CVE-2021-27922,pillow,6.2.0,8.1.2,7.5,0.04851,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Excessive memory allocation in ICNS image reader
+P2,16.7,CVE-2026-40175,CVE-2026-40175,axios,0.21.0,"1.15.0, 0.31.0",8.1,0.01307,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Remote Code Execution via Prototype Pollution escalation
+P2,16.7,CVE-2026-42041,CVE-2026-42041,axios,0.21.0,"1.15.1, 0.31.1",8.2,0.0081,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Authentication bypass due to prototype pollution of HTTP error handling
+P2,16.7,CVE-2023-43804,CVE-2023-43804,urllib3,1.24.1,"2.0.6, 1.26.17",8.1,0.0136,False,grype+trivy,2026-10-11,2026-11-10,OK,python-urllib3: Cookie request header isn't stripped during cross-origin redirects
+P2,16.6,CVE-2026-44490,CVE-2026-44490,axios,0.21.0,"1.16.0, 0.32.0",8.2,0.00403,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Information disclosure and denial of service due to prototype pollution
+P2,16.6,CVE-2020-24583,CVE-2020-24583,django,2.2.0,"2.2.16, 3.0.10, 3.1.1",7.5,0.03969,False,grype+trivy,2026-10-11,2026-11-10,OK,django: incorrect permissions on intermediate-level directories on Python 3.7+
+P2,16.6,CVE-2026-59197,CVE-2026-59197,pillow,6.2.0,12.3.0,8.2,0.00445,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Native heap out-of-bounds write
+P2,16.5,CVE-2018-1000656,CVE-2018-1000656,flask,0.12.2,0.12.3,7.5,0.03855,False,grype+trivy,2026-10-11,2026-11-10,OK,python-flask: Denial of Service via crafted JSON file
+P2,16.4,CVE-2019-14232,CVE-2019-14232,django,2.2.0,"1.11.23, 2.1.11, 2.2.4",7.5,0.03531,False,grype+trivy,2026-10-11,2026-11-10,OK,Django: backtracking in a regular expression in django.utils.text.Truncator leads to DoS
+P2,16.3,CVE-2019-14233,CVE-2019-14233,django,2.2.0,"1.11.23, 2.1.11, 2.2.4",7.5,0.03172,False,grype+trivy,2026-10-11,2026-11-10,OK,Django: the behavior of the underlying HTMLParser leading to DoS
+P2,16.3,CVE-2020-24584,CVE-2020-24584,django,2.2.0,"2.2.16, 3.0.10, 3.1.1",7.5,0.03297,False,grype+trivy,2026-10-11,2026-11-10,OK,django: permission escalation in intermediate-level directories of the file system cache on Python 3.7+
+P2,16.3,CVE-2021-23437,CVE-2021-23437,pillow,6.2.0,8.3.2,7.5,0.0318,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: possible ReDoS via the getrgb function
+P2,16.3,CVE-2021-27921,CVE-2021-27921,pillow,6.2.0,8.1.2,7.5,0.0317,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Excessive memory allocation in BLP image reader
+P2,16.2,CVE-2019-14235,CVE-2019-14235,django,2.2.0,"1.11.23, 2.1.11, 2.2.4",7.5,0.03073,False,grype+trivy,2026-10-11,2026-11-10,OK,Django: Potential memory exhaustion in django.utils.encoding.uri_to_iri()
+P2,16.2,CVE-2021-27923,CVE-2021-27923,pillow,6.2.0,8.1.2,7.5,0.03045,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Excessive memory allocation in ICO image reader
+P2,16.2,CVE-2019-11324,CVE-2019-11324,urllib3,1.24.1,1.24.2,7.5,0.02915,False,grype+trivy,2026-10-11,2026-11-10,OK,python-urllib3: Certification mishandle when error should be thrown
+P2,16.2,CVE-2026-21441,CVE-2026-21441,urllib3,1.24.1,2.6.3,7.5,0.02922,False,grype+trivy,2026-10-11,2026-11-10,OK,urllib3: urllib3 vulnerable to decompression-bomb safeguard bypass when following HTTP redirects (streaming API)
+P2,16.1,CVE-2020-10379,CVE-2020-10379,pillow,6.2.0,7.1.0,7.8,0.01129,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: two buffer overflows in libImaging/TiffDecode.c due to small buffers allocated in ImagingLibTiffDecode()
+P2,16.0,CVE-2021-45115,CVE-2021-45115,django,2.2.0,"2.2.26, 3.2.11, 4.0.1",7.5,0.02417,False,grype+trivy,2026-10-11,2026-11-10,OK,django: Denial-of-service possibility in UserAttributeSimilarityValidator
+P2,16.0,CVE-2021-28676,CVE-2021-28676,pillow,6.2.0,8.2.0,7.5,0.02501,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Infinite loop in FLI image reader
+P2,15.9,CVE-2021-25290,CVE-2021-25290,pillow,6.2.0,8.1.1,7.5,0.02372,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Negative-offset memcpy in TIFF image reader
+P2,15.9,CVE-2021-28677,CVE-2021-28677,pillow,6.2.0,8.2.0,7.5,0.02338,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Excessive CPU use in EPS image reader
+P2,15.8,CVE-2026-25639,CVE-2026-25639,axios,0.21.0,"1.13.5, 0.30.3",7.5,0.01989,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios affected by Denial of Service via __proto__ Key in mergeConfig
+P2,15.8,CVE-2026-44495,CVE-2026-44495,axios,0.21.0,"1.15.2, 0.31.1",7.7,0.01041,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Information disclosure due to prototype pollution vulnerability
+P2,15.8,CVE-2022-22970,CVE-2022-22970,org.springframework:spring-beans,5.3.17,"5.2.22.RELEASE, 5.3.20",7.5,0.01962,False,grype+trivy,2026-10-11,2026-11-10,OK,springframework: DoS via data binding to multipartFile or servlet part
+P2,15.8,CVE-2025-64458,CVE-2025-64458,django,2.2.0,"5.2.8, 5.1.14, 4.2.26",7.5,0.01909,False,grype+trivy,2026-10-11,2026-11-10,OK,Django: Denial-of-service vulnerability in Django on Windows
+P2,15.8,CVE-2024-56326,CVE-2024-56326,jinja2,2.10,3.1.5,7.8,0.00522,False,grype+trivy,2026-10-11,2026-11-10,OK,jinja2: Jinja has a sandbox breakout through indirect reference to format method
+P2,15.8,CVE-2019-19911,CVE-2019-19911,pillow,6.2.0,6.2.2,7.5,0.02118,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: uncontrolled resource consumption in FpxImagePlugin.py
+P2,15.7,CVE-2021-45116,CVE-2021-45116,django,2.2.0,"2.2.26, 3.2.11, 4.0.1",7.5,0.01839,False,grype+trivy,2026-10-11,2026-11-10,OK,django: Potential information disclosure in dictsort template filter
+P2,15.7,CVE-2019-1010083,CVE-2019-1010083,flask,0.12.2,1.0,7.5,0.01832,False,grype+trivy,2026-10-11,2026-11-10,OK,python-flask: unexpected memory usage can lead to denial of service via crafted encoded JSON data
+P2,15.6,CVE-2021-44420,CVE-2021-44420,django,2.2.0,"2.2.25, 3.1.14, 3.2.10",7.3,0.02488,False,grype+trivy,2026-10-11,2026-11-10,OK,django: potential bypass of an upstream access control based on URL paths
+P2,15.6,CVE-2021-25291,CVE-2021-25291,pillow,6.2.0,8.2.0,7.5,0.01398,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: out-of-bounds read in TiffReadRGBATile in TiffDecode.c
+P2,15.6,CVE-2021-25293,CVE-2021-25293,pillow,6.2.0,8.1.1,7.5,0.01601,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Out-of-bounds read in SGI RLE image reader
+P2,15.5,CVE-2026-34480,CVE-2026-34480,org.apache.logging.log4j:log4j-core,2.14.1,2.25.4,7.5,0.01187,False,grype+trivy,2026-10-11,2026-11-10,OK,org.apache.logging.log4j/log4j-core: Apache Log4j Core: Invalid XML output causes denial of service in logging
+P2,15.5,CVE-2023-30861,CVE-2023-30861,flask,0.12.2,"2.3.2, 2.2.5",7.5,0.01261,False,grype+trivy,2026-10-11,2026-11-10,OK,flask: Possible disclosure of permanent session cookie due to missing Vary: Cookie header
+P2,15.5,CVE-2022-45198,CVE-2022-45198,pillow,6.2.0,9.2.0,7.5,0.01296,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow before 9.2.0 performs Improper Handling of Highly Compressed GI ...
+P2,15.5,CVE-2023-44271,CVE-2023-44271,pillow,6.2.0,10.0.0,7.5,0.01131,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: uncontrolled resource consumption when textlength in an ImageDraw instance operates on a long text argument
+P2,15.4,CVE-2026-44496,CVE-2026-44496,axios,0.21.0,"1.16.0, 0.32.0",7.5,0.00966,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Client-side Denial of Service via unescaped regex metacharacters in XSRF cookie name
+P2,15.4,CVE-2026-42039,CVE-2026-42039,axios,0.21.0,"1.15.1, 0.31.1",7.5,0.00966,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Node.js: Axios: Denial of Service via unbounded recursion in toFormData with deeply nested request data
+P2,15.3,CVE-2026-44486,CVE-2026-44486,axios,0.21.0,"1.16.0, 0.32.0",7.5,0.0076,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Information disclosure of proxy credentials via HTTP redirects
+P2,15.3,CVE-2026-44487,CVE-2026-44487,axios,0.21.0,"1.16.0, 0.32.0",7.5,0.0076,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Information disclosure of proxy credentials via redirect flows
+P2,15.3,CVE-2020-5313,CVE-2020-5313,pillow,6.2.0,6.2.2,7.1,0.02752,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: out-of-bounds read in ImagingFliDecode when loading FLI images
+P2,15.3,CVE-2025-66418,CVE-2025-66418,urllib3,1.24.1,2.6.0,7.5,0.00682,False,grype+trivy,2026-10-11,2026-11-10,OK,urllib3: urllib3: Unbounded decompression chain leads to resource exhaustion
+P2,15.3,CVE-2025-66471,CVE-2025-66471,urllib3,1.24.1,2.6.0,7.5,0.00682,False,grype+trivy,2026-10-11,2026-11-10,OK,urllib3: urllib3 Streaming API improperly handles highly compressed data
+P2,15.2,CVE-2026-42033,CVE-2026-42033,axios,0.21.0,"1.15.1, 0.31.1",7.4,0.00924,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: HTTP Transport Hijacking via Prototype Pollution
+P2,15.2,CVE-2026-42038,CVE-2026-42038,axios,0.21.0,"1.15.1, 0.31.1",7.5,0.00381,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Information disclosure due to `no_proxy` bypass
+P2,15.2,CVE-2025-41249,CVE-2025-41249,org.springframework:spring-core,5.3.17,6.2.11,7.5,0.00461,False,trivy,2026-10-11,2026-11-10,OK,org.springframework/spring-core: Spring Framework Annotation Detection Vulnerability
+P2,15.2,CVE-2026-41848,CVE-2026-41848,org.springframework:spring-core,5.3.17,"7.0.8, 6.2.19",7.5,0.00405,False,trivy,2026-10-11,2026-11-10,OK,spring-framework: Spring Framework: Regular Expression Denial of Service in AntPathMatcher
+P2,15.2,CVE-2026-54059,CVE-2026-54059,pillow,6.2.0,12.3.0,7.5,0.0041,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Pillow: Denial of Service via crafted PCF font data
+P2,15.2,CVE-2026-54060,CVE-2026-54060,pillow,6.2.0,12.3.0,7.5,0.00418,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Pillow: Denial of Service via excessive memory allocation when processing font files
+P2,15.2,CVE-2026-55379,CVE-2026-55379,pillow,6.2.0,12.3.0,7.5,0.00421,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Pillow: Denial of Service via crafted BDF font file
+P2,15.2,CVE-2026-55380,CVE-2026-55380,pillow,6.2.0,12.3.0,7.5,0.00418,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Pillow: Denial of Service via crafted GD 2.x image file
+P2,15.2,CVE-2026-59199,CVE-2026-59199,pillow,6.2.0,12.3.0,7.5,0.00385,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Denial of Service via out-of-bounds write in image processing
+P2,15.2,CVE-2026-59200,CVE-2026-59200,pillow,6.2.0,12.3.0,7.5,0.00385,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Denial of service via crafted PDF stream
+P2,15.2,CVE-2026-59205,CVE-2026-59205,pillow,6.2.0,12.3.0,7.5,0.00385,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Controlled native heap corruption in ImageCms.ImageCmsTransform.apply API
+P2,15.1,CVE-2026-59198,CVE-2026-59198,pillow,6.2.0,12.3.0,7.5,0.00313,False,grype+trivy,2026-10-11,2026-11-10,OK,Pillow: Pillow: Information disclosure via TGA RLE encoder out-of-bounds read
+P2,15.1,CVE-2026-97689,CVE-2026-97689,urllib3,1.24.1,2.8.0,7.5,0.00292,False,grype+trivy,2026-10-11,2026-11-10,OK,urllib3: urllib3: Denial of Service via unbounded memory allocation in chunk parser
+P2,15.0,CVE-2026-42035,CVE-2026-42035,axios,0.21.0,"1.15.1, 0.31.1",7.4,0.00381,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: Axios: Arbitrary HTTP header injection via prototype pollution
+P2,15.0,CVE-2026-67316,CVE-2026-67316,axios,0.21.0,"1.18.0, 0.33.0",7.4,0.00424,False,grype+trivy,2026-10-11,2026-11-10,OK,axios: axios: Prototype Pollution allows unauthorized data transmission and network redirection
+P2,15.0,,NSWG-ECO-516,lodash,4.17.15,>=4.17.19,7.5,,False,trivy,2026-10-11,2026-11-10,OK,Allocation of Resources Without Limits or Throttling
+P2,15.0,,GHSA-jgpv-4h4c-xhw3,pillow,6.2.0,8.1.2,7.5,,False,grype+trivy,2026-10-11,2026-11-10,OK,Uncontrolled Resource Consumption in pillow
+P2,14.9,CVE-2020-35653,CVE-2020-35653,pillow,6.2.0,8.1.0,7.1,0.0164,False,grype+trivy,2026-10-11,2026-11-10,OK,python-pillow: Buffer over-read in PCX image reader
+P3,14.2,CVE-2020-13254,CVE-2020-13254,django,2.2.0,"2.2.13, 3.0.7",5.9,0.0609,False,grype+trivy,2026-10-11,2027-01-09,OK,django: potential data leakage via malformed memcached keys
+P3,14.0,CVE-2022-22815,CVE-2022-22815,pillow,6.2.0,9.0.0,6.5,0.02578,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: improperly initializes ImagePath.Path in path_getbbox() in path.c
+P3,13.9,CVE-2020-26137,CVE-2020-26137,urllib3,1.24.1,1.25.9,6.5,0.02269,False,grype+trivy,2026-10-11,2027-01-09,OK,python-urllib3: CRLF injection via HTTP request method
+P3,13.8,CVE-2024-28219,CVE-2024-28219,pillow,6.2.0,10.3.0,6.7,0.00997,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: buffer overflow in _imagingcms.c
+P3,13.8,CVE-2022-22816,CVE-2022-22816,pillow,6.2.0,9.0.0,6.5,0.0192,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: buffer over-read during initialization of ImagePath.Path in path_getbbox() in path.c
+P3,13.7,CVE-2019-19118,CVE-2019-19118,django,2.2.0,"2.1.15, 2.2.8",6.5,0.0167,False,grype+trivy,2026-10-11,2027-01-09,OK,django: privilege escalation in the django admin
+P3,13.7,CVE-2021-25292,CVE-2021-25292,pillow,6.2.0,8.1.1,6.5,0.01635,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: Regular expression DoS in PDF format parser
+P3,13.6,CVE-2021-3281,CVE-2021-3281,django,2.2.0,"2.2.18, 3.1.6, 3.0.12",5.3,0.07605,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Potential directory-traversal via archive.extract()
+P3,13.5,CVE-2020-28500,CVE-2020-28500,lodash,4.17.15,4.17.21,5.3,0.07336,False,grype+trivy,2026-10-11,2027-01-09,OK,"nodejs-lodash: ReDoS via the toNumber, trim and trimEnd functions"
+P3,13.5,CVE-2021-32052,CVE-2021-32052,django,2.2.0,"2.2.22, 3.1.10, 3.2.2",6.1,0.03172,False,grype+trivy,2026-10-11,2027-01-09,OK,django: header injection possibility since URLValidator accepted newlines in input on Python 3.9.5+
+P3,13.5,CVE-2022-22818,CVE-2022-22818,django,2.2.0,"2.2.27, 3.2.12, 4.0.2",6.1,0.03356,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Possible XSS via '{% debug %}' template tag
+P3,13.5,CVE-2024-37891,CVE-2024-37891,urllib3,1.24.1,"1.26.19, 2.2.2",6.5,0.01141,False,grype+trivy,2026-10-11,2027-01-09,OK,urllib3: proxy-authorization request header is not stripped during cross-origin redirects
+P3,13.4,CVE-2020-13596,CVE-2020-13596,django,2.2.0,"2.2.13, 3.0.7",6.1,0.02897,False,grype+trivy,2026-10-11,2027-01-09,OK,django: possible XSS via admin ForeignKeyRawIdWidget
+P3,13.4,CVE-2023-32681,CVE-2023-32681,requests,2.19.1,2.31.0,6.1,0.02974,False,grype+trivy,2026-10-11,2027-01-09,OK,python-requests: Unintended leak of Proxy-Authorization header
+P3,13.2,CVE-2023-45857,CVE-2023-45857,axios,0.21.0,"1.6.0, 0.28.0",6.5,0.00556,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: exposure of confidential data stored in cookies
+P3,13.2,CVE-2026-2950,CVE-2026-2950,lodash,4.17.15,4.18.0,6.5,0.00377,False,grype+trivy,2026-10-11,2027-01-09,OK,lodash: Lodash: Prototype pollution allows deletion of built-in prototype properties via array path bypass
+P3,13.2,CVE-2019-12308,CVE-2019-12308,django,2.2.0,"1.11.21, 2.1.9, 2.2.2",6.1,0.02402,False,grype+trivy,2026-10-11,2027-01-09,OK,django: missing URL validation by AdminURLFieldWidget leads to generation of clickable unsafe JavaScript link causing cross site scripting
+P3,13.0,CVE-2019-11236,CVE-2019-11236,urllib3,1.24.1,1.24.3,6.1,0.02073,False,grype+trivy,2026-10-11,2027-01-09,OK,python-urllib3: CRLF injection due to not encoding the '\r\n' sequence leading to possible attack on internal service
+P3,12.7,CVE-2020-28168,CVE-2020-28168,axios,0.21.0,0.21.1,5.9,0.02359,False,grype+trivy,2026-10-11,2027-01-09,OK,nodejs-axios: allows an attacker to bypass a proxy by providing a URL that responds with a redirect to a restricted host or IP address
+P3,12.6,CVE-2024-22195,CVE-2024-22195,jinja2,2.10,3.1.3,6.1,0.00892,False,grype+trivy,2026-10-11,2027-01-09,OK,jinja2: HTML attribute injection when passing user input as keys to xmlattr filter
+P3,12.5,CVE-2024-29041,CVE-2024-29041,express,4.16.0,"4.19.2, 5.0.0-beta.3",6.1,0.00786,False,grype+trivy,2026-10-11,2027-01-09,OK,express: cause malformed URLs to be evaluated
+P3,12.4,CVE-2018-25091,CVE-2018-25091,urllib3,1.24.1,1.24.2,6.1,0.00516,False,grype+trivy,2026-10-11,2027-01-09,OK,urllib3: urllib3 does not remove the authorization HTTP header when following a cross-origin redirect
+P3,12.4,CVE-2025-50181,CVE-2025-50181,urllib3,1.24.1,2.5.0,6.1,0.00474,False,grype+trivy,2026-10-11,2027-01-09,OK,urllib3: urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation
+P3,12.3,CVE-2026-53878,CVE-2026-53878,django,2.2.0,"5.2.16, 6.0.7",6.1,0.00327,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django: HTTP header injection via DomainNameValidator accepting newlines
+P3,12.1,CVE-2026-49844,CVE-2026-49844,org.apache.logging.log4j:log4j-api,2.14.1,"2.25.5, 2.26.1",5.9,0.00813,False,trivy,2026-10-11,2027-01-09,OK,org.apache.logging.log4j/log4j-api: Apache Log4j API: Malformed JSON output due to improper encoding of floating-point values
+P3,12.1,CVE-2021-28658,CVE-2021-28658,django,2.2.0,"2.2.20, 3.0.14, 3.1.8",5.3,0.03865,False,grype+trivy,2026-10-11,2027-01-09,OK,django: potential directory-traversal via uploaded files
+P3,12.0,CVE-2020-7598,CVE-2020-7598,minimist,1.2.0,"0.2.1, 1.2.3",5.6,0.01931,False,grype+trivy,2026-10-11,2027-01-09,OK,nodejs-minimist: prototype pollution allows adding or modifying properties of Object.prototype using a constructor or __proto__ payload
+P3,12.0,CVE-2026-34477,CVE-2026-34477,org.apache.logging.log4j:log4j-core,2.14.1,2.25.4,5.9,0.00502,False,grype+trivy,2026-10-11,2027-01-09,OK,org.apache.logging.log4j/log4j-core: Apache Log4j Core: Man-in-the-middle attack due to incomplete hostname verification
+P3,12.0,CVE-2020-28493,CVE-2020-28493,jinja2,2.10,2.11.3,5.3,0.03546,False,grype+trivy,2026-10-11,2027-01-09,OK,python-jinja2: ReDoS vulnerability in the urlize filter
+P3,11.6,CVE-2021-45452,CVE-2021-45452,django,2.2.0,"2.2.26, 3.2.11, 4.0.1",5.3,0.02408,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Potential directory-traversal via Storage.save()
+P3,11.6,CVE-2020-10177,CVE-2020-10177,pillow,6.2.0,7.1.0,5.5,0.0148,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: multiple out-of-bounds reads in libImaging/FliDecode.c
+P3,11.6,CVE-2020-10994,CVE-2020-10994,pillow,6.2.0,7.1.0,5.5,0.01432,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: multiple out-of-bounds reads via a crafted JP2 file
+P3,11.5,CVE-2020-35655,CVE-2020-35655,pillow,6.2.0,8.1.0,5.4,0.01663,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: Buffer over-read in SGI RLE image reader
+P3,11.4,CVE-2020-10378,CVE-2020-10378,pillow,6.2.0,7.1.0,5.5,0.01114,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: an out-of-bounds read in libImaging/PcxDecode.c can occur when reading PCX files
+P3,11.4,CVE-2021-28675,CVE-2021-28675,pillow,6.2.0,8.2.0,5.5,0.00956,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: Excessive memory allocation in PSD image reader
+P3,11.3,CVE-2019-12781,CVE-2019-12781,django,2.2.0,"2.1.10, 2.2.3, 1.11.22",5.3,0.01711,False,grype+trivy,2026-10-11,2027-01-09,OK,Django: Incorrect HTTP detection with reverse-proxy connecting via HTTPS
+P3,11.3,CVE-2021-28678,CVE-2021-28678,pillow,6.2.0,8.2.0,5.5,0.00732,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: Excessive looping in BLP image reader
+P3,11.3,CVE-2024-35195,CVE-2024-35195,requests,2.19.1,2.32.0,5.6,0.0034,False,grype+trivy,2026-10-11,2027-01-09,OK,requests: subsequent requests to the same host ignore cert verification
+P3,11.2,CVE-2024-34064,CVE-2024-34064,jinja2,2.10,3.1.4,5.4,0.00979,False,grype+trivy,2026-10-11,2027-01-09,OK,jinja2: accepts keys containing non-attribute characters
+P3,11.1,CVE-2026-42308,CVE-2026-42308,pillow,6.2.0,12.2.0,5.5,0.00159,False,grype+trivy,2026-10-11,2027-01-09,OK,Pillow: Pillow: Denial of Service via integer overflow in font processing
+P3,11.1,CVE-2026-42310,CVE-2026-42310,pillow,6.2.0,12.2.0,5.5,0.00177,False,grype+trivy,2026-10-11,2027-01-09,OK,Pillow: Pillow: Denial of Service via malicious PDF processing
+P3,11.1,CVE-2026-25645,CVE-2026-25645,requests,2.19.1,2.33.0,5.5,0.00185,False,grype+trivy,2026-10-11,2027-01-09,OK,requests: Requests: Security bypass due to predictable temporary file creation
+P3,11.0,CVE-2026-15830,CVE-2026-15830,django,2.2.0,"5.2.17, 6.0.8, 6.1.1",5.3,0.01113,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django: Denial of Service via parsing deeply nested geometry collections
+P3,11.0,CVE-2024-47081,CVE-2024-47081,requests,2.19.1,2.32.4,5.3,0.0098,False,grype+trivy,2026-10-11,2027-01-09,OK,requests: Requests vulnerable to .netrc credentials leak via malicious URLs
+P3,10.9,CVE-2025-27152,CVE-2025-27152,axios,0.21.0,"1.8.2, 0.30.0",5.3,0.00792,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: Possible SSRF and Credential Leakage via Absolute URL in axios Requests
+P3,10.9,CVE-2026-42042,CVE-2026-42042,axios,0.21.0,"1.15.1, 0.31.1",5.4,0.00324,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: Axios: XSRF token bypass leading to information disclosure
+P3,10.9,CVE-2021-33203,CVE-2021-33203,django,2.2.0,"2.2.24, 3.1.12, 3.2.4",4.9,0.02737,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Potential directory traversal via ``admindocs``
+P3,10.9,CVE-2024-45231,CVE-2024-45231,django,2.2.0,"5.1.1, 5.0.9, 4.2.16",5.3,0.00788,False,grype+trivy,2026-10-11,2027-01-09,OK,python-django: Potential user email enumeration via response status on password reset
+P3,10.9,CVE-2025-48432,CVE-2025-48432,django,2.2.0,"5.2.2, 5.1.10, 4.2.22",5.3,0.00751,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django Path Injection Vulnerability
+P3,10.8,CVE-2026-42034,CVE-2026-42034,axios,0.21.0,"1.15.1, 0.31.1",5.3,0.0048,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: Axios: Denial of Service via oversized streamed uploads bypassing body limits
+P3,10.8,CVE-2026-42036,CVE-2026-42036,axios,0.21.0,"1.15.1, 0.31.1",5.3,0.0048,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: Axios: Denial of Service via unbounded stream consumption when 'responseType: 'stream'' is used
+P3,10.8,CVE-2026-48587,CVE-2026-48587,django,2.2.0,"5.2.15, 6.0.6",5.3,0.00429,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django: Information disclosure via improper handling of Vary header whitespace
+P3,10.8,CVE-2026-48588,CVE-2026-48588,django,2.2.0,"5.2.16, 6.0.7",5.3,0.00429,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django: Information disclosure due to improper caching of Set-Cookie responses
+P3,10.8,CVE-2026-8404,CVE-2026-8404,django,2.2.0,"5.2.15, 6.0.6",5.3,0.00429,False,grype+trivy,2026-10-11,2027-01-09,OK,Django: Django: Information disclosure due to improper handling of Cache-Control directives
+P3,10.7,CVE-2026-44431,CVE-2026-44431,urllib3,1.24.1,2.7.0,5.3,0.00339,False,grype+trivy,2026-10-11,2027-01-09,OK,urllib3: urllib3: Information disclosure via cross-origin redirects forwarding sensitive headers
+P3,10.2,CVE-2024-43796,CVE-2024-43796,express,4.16.0,"4.20.0, 5.0.0",5,0.00486,False,grype+trivy,2026-10-11,2027-01-09,OK,express: Improper Input Handling in Express Redirects
+P3,10.0,,ZAP-10038,http://127.0.0.1:8088,,,5.0,,False,zap,2026-10-11,2027-01-09,OK,Content Security Policy (CSP) Header Not Set
+P3,10.0,,ZAP-40035,http://127.0.0.1:8088,,,5.0,,False,zap,2026-10-11,2027-01-09,OK,Hidden File Found
+P3,10.0,,ZAP-10020,http://127.0.0.1:8088,,,5.0,,False,zap,2026-10-11,2027-01-09,OK,Missing Anti-clickjacking Header
+P3,9.9,CVE-2025-68161,CVE-2025-68161,org.apache.logging.log4j:log4j-core,2.14.1,2.25.3,4.8,0.00767,False,grype+trivy,2026-10-11,2027-01-09,OK,Apache Log4j: Apache Log4j Core: Information disclosure via missing TLS hostname verification
+P3,9.8,CVE-2026-53877,CVE-2026-53877,django,2.2.0,"5.2.16, 6.0.7",4.8,0.00527,False,grype+trivy,2026-10-11,2027-01-09,OK,django: Django: Information disclosure via heap buffer over-read in GDALRaster
+P3,9.1,CVE-2026-55798,CVE-2026-55798,pillow,6.2.0,12.3.0,4.5,0.00179,False,grype+trivy,2026-10-11,2027-01-09,OK,python-pillow: Pillow: Arbitrary command injection via shell metacharacters in file paths
+P3,8.8,CVE-2026-27205,CVE-2026-27205,flask,0.12.2,3.1.3,4.3,0.00432,False,grype+trivy,2026-10-11,2027-01-09,OK,flask: Flask: Information disclosure via improper caching of session data
+P3,8.7,CVE-2026-6873,CVE-2026-6873,django,2.2.0,"5.2.15, 6.0.6",4.3,0.00281,False,grype+trivy,2026-10-11,2027-01-09,OK,python-django: Django: Information disclosure via non-injective cookie salt derivation
+P3,8.6,CVE-2023-45803,CVE-2023-45803,urllib3,1.24.1,"2.0.7, 1.26.18",4.2,0.00544,False,grype+trivy,2026-10-11,2027-01-09,OK,urllib3: Request body not stripped after redirect from 303 status changes request method to GET
+P3,7.5,CVE-2026-67319,CVE-2026-67319,axios,0.21.0,"0.33.0, 1.18.0",3.7,0.00318,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: axios: Information disclosure and data manipulation via prototype pollution
+P3,7.5,CVE-2026-42040,CVE-2026-42040,axios,0.21.0,"1.15.1, 0.31.1",3.7,0.00264,False,grype+trivy,2026-10-11,2027-01-09,OK,axios: Axios: Incorrect null byte handling can lead to data integrity issues
+P3,6.0,,GHSA-4fx9-vc88-q2xc,pillow,6.2.0,9.0.0,3.0,,False,grype+trivy,2026-10-11,2027-01-09,OK,Infinite loop in Pillow
+P3,6.0,,ZAP-10010,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,Cookie No HttpOnly Flag
+P3,6.0,,ZAP-10054,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,Cookie without SameSite Attribute
+P3,6.0,,ZAP-10017,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,Cross-Domain JavaScript Source File Inclusion
+P3,6.0,,ZAP-10037,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,"Server Leaks Information via ""X-Powered-By"" HTTP Response Header Field(s)"
+P3,6.0,,ZAP-10036,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,"Server Leaks Version Information via ""Server"" HTTP Response Header Field"
+P3,6.0,,ZAP-10021,http://127.0.0.1:8088,,,3.0,,False,zap,2026-10-11,2027-01-09,OK,X-Content-Type-Options Header Missing
+P3,0.0,,ZAP-10111,http://127.0.0.1:8088,,,0.0,,False,zap,2026-10-11,2027-01-09,OK,Authentication Request Identified
+P3,0.0,,ZAP-10024,http://127.0.0.1:8088,,,0.0,,False,zap,2026-10-11,2027-01-09,OK,Information Disclosure - Sensitive Information in URL

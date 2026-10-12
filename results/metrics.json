@@ -1,0 +1,41 @@
+{
+ "raw_by_tool": {
+  "trivy": 163,
+  "grype": 160,
+  "zap": 11
+ },
+ "raw_total": 334,
+ "after_dedup": 174,
+ "dedup_removed": 160,
+ "with_cve": 161,
+ "epss_scored": 161,
+ "by_priority": {
+  "P0": 1,
+  "P1": 22,
+  "P2": 77,
+  "P3": 74
+ },
+ "kev_ransomware": 0,
+ "top_n": 20,
+ "kev_total": 1,
+ "kev_in_top_cvss_only": 0,
+ "kev_in_top_risk_based": 1,
+ "epss>=0.1_in_top_cvss_only": 5,
+ "epss>=0.1_in_top_risk_based": 10,
+ "workload_cvss>=7": 99,
+ "workload_P0+P1": 23,
+ "sla": {
+  "open": 174,
+  "breached": 1,
+  "due_soon": 21,
+  "fixed_total": 21,
+  "mttr_days": 14.0
+ },
+ "today": "2026-10-25",
+ "runtime_s": 0.05,
+ "feeds": {
+  "kev_version": "2026.10.08",
+  "kev_count": 1739,
+  "epss_date": "2026-10-10"
+ }
+}

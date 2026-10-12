@@ -1,0 +1,10 @@
+# Interview talking points: VulnOps
+
+1. **Why not just CVSS?** CVSS measures *severity*, not *likelihood*. In my run, CVSS-only ordering put two axios bugs (CVSS 10.0 and 9.9, EPSS ≈0.01) above Spring4Shell (9.8, EPSS 0.996, in KEV), and caught only 2 of 4 KEV CVEs in the top 20. Risk-based ordering caught 4 of 4.
+2. **EPSS vs KEV.** KEV means *confirmed exploited in the wild* (CISA BOD 22-01 sets deadlines for US federal agencies). EPSS is a daily ML probability of exploitation in the next 30 days. I use KEV as the hard P0 trigger and EPSS for ranking. Neither replaces asset context.
+3. **Workload reduction.** "Fix every CVSS ≥ 7" meant 107 items; P0+P1 meant 30, about 72% less, without dropping any known-exploited bug. That's the argument for a risk-based SLA.
+4. **Dedup across tools.** Trivy and Grype overlapped on 170 findings. Grype reports GHSA IDs (mapped to CVE via `relatedVulnerabilities`) and names Maven packages `log4j-core` where Trivy says `org.apache.logging.log4j:log4j-core`. My first run double-counted log4j until I normalised the package key, and there's a test for it.
+5. **SLA and MTTR.** `state.json` stores first_seen per finding. A finding that disappears is marked fixed, and if it reappears it's re-opened. After the simulated patch run: 21 fixed, MTTR 14 days, and one P0 breach (Pillow/libwebp CVE-2023-4863, still open at day 14 against a 7-day SLA).
+6. **SAST vs SCA vs DAST.** Trivy and Grype are SCA (dependency manifests). ZAP is DAST: it found header and cookie issues the SCA tools can't see, but its quick scan missed my intentional reflected XSS. That shows why you layer tools and why DAST needs tuning.
+7. **Feed hygiene.** Feeds are cached for 24 h, there's an `--offline` mode so CI and tests are deterministic, and the dashboard shows the catalog version and EPSS date so every decision can be audited.
+8. **Next steps.** Push findings into DefectDojo via its import API, expose Prometheus metrics for Grafana, add an asset-criticality multiplier (internet-facing ×2), and add reachability (e.g. govulncheck-style call graphs).
